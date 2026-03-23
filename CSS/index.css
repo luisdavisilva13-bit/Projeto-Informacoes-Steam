@@ -1,0 +1,230 @@
+body {
+    background: linear-gradient(180deg, #1e1e1e, #111);
+    color: white;
+    font-family: 'Roboto', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    max-width: 940px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5px;
+    background: #1e1e1e;
+    border-bottom: 2px solid #444;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    width: 150px;
+    margin: 0;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 9999;
+}
+
+.menu-btn::before {
+    content: '☰';
+    display: block;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+    letter-spacing: 0;
+    font-family: 'roboto', sans-serif;
+}
+
+.menu li a:hover {
+    background: rgb(0, 180, 255);
+    color: #000;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 60px;
+    background: linear-gradient(45deg, #00b0ff, #147CA6);
+    background-clip: text;
+    color: transparent;
+    font-family: Luckiest Guy, sans-serif;
+}
+
+h2 {
+    border-bottom: 3px solid #333;
+    margin-top: 40px;
+    padding-bottom: 5px;
+}
+
+p {
+    padding: 0 10px;
+    text-indent: 15px;
+    text-align: justify;
+    margin: 15px 0;
+    color: white;
+}
+
+figure {
+    background: linear-gradient(180deg, #00b4ff, #008cc7);
+    border-radius: 12px;
+    border: 3px solid white;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.45);
+    padding: 15px;
+    margin: 30px auto;
+    text-align: center;
+    transition: 0.3s;
+}
+
+figure:hover {
+    transform: scale(1.05);
+}
+
+figcaption {
+    font-style: italic;
+}
+
+.steamHardware {
+    max-width: 550px;
+    margin: 40px auto;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    margin: 40px 0 20px;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 2px solid #333;
+}
+
+footer img {
+    max-width: 650px;
+    height: auto;
+}
+
+#criador {
+    float: right;
+    margin: 0 0 10px 15px;
+    width: 300px;
+}
+
+a {
+    color: #00b4ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff8c1e;
+}
+
+a:active {
+    color: #673EE6;
+}
+
+@media screen and (max-width: 980px) {
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo {
+        margin-left: -50px;
+    }
+
+    #menu-toggle:checked+.menu-btn::before {
+        content: '✕';
+    }
+
+    .menu-btn {
+        display: block;
+        margin-left: auto;
+        font-size: 32px;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 65%;
+        background: #111;
+        border-top: 2px solid #333;
+        padding: 10px 0;
+
+    }
+
+    #menu-toggle:checked~.menu {
+        display: flex;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    #criador {
+        float: none;
+        margin: 20px auto;
+        width: 80%;
+    }
+
+    footer img{
+        width: 300px;
+    }
+}
