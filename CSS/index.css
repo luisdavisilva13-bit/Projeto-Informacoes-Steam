@@ -159,6 +159,10 @@ a:active {
     color: #673EE6;
 }
 
+ul li {
+    margin-bottom: 12px;
+}
+
 @media screen and (max-width: 980px) {
 
     .navbar {
